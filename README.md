@@ -14,7 +14,7 @@ GoSeeder is heavily inspired by fzaninotto's [fzaninotto/Faker](https://github.c
 - [Installation](#installation)
 - [Basic Usage](#basic-usage)
 - [Formatters](#formatters)
-	- [Person](#person_formatter)
+	- [Person](#person)
 - [Contributors](#contributors)
 - [License](#license)
 
