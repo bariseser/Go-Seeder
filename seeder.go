@@ -1,5 +1,7 @@
 package seeder
 
+import "strings"
+
 func Name() string {
 	return getRandomData(AllFormat.Name)
 }
@@ -26,4 +28,8 @@ func TitleFemale() string {
 
 func Suffix() string {
 	return getRandomElement(AllData.Suffix)
+}
+
+func Email() string {
+	return strings.ToLower(getRandomData(AllFormat.Email))
 }

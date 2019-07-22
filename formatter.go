@@ -2,16 +2,17 @@ package seeder
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"math/rand"
+	"regexp"
 	"strings"
 	"sync"
 	"time"
 )
 
 type Formats struct {
-	Name []string `json:"nameFormat"`
+	Name  []string `json:"nameFormat"`
+	Email []string `json:"emailFormat"`
 }
 
 type Data struct {
@@ -21,6 +22,7 @@ type Data struct {
 	TitleMale       []string `json:"titleMale"`
 	TitleFemale     []string `json:"titleFemale"`
 	Suffix          []string `json:"suffix"`
+	FreeEmailDomain []string `json:"freeEmailDomain"`
 }
 
 type serviceProvider struct {
@@ -47,6 +49,7 @@ var functionMap = map[string]func() string{
 	"titleMale":       titleMale,
 	"titleFemale":     titleFemale,
 	"suffix":          suffix,
+	"freeEmailDomain": freeEmailDomain,
 }
 
 func init() {
@@ -67,7 +70,6 @@ func init() {
 
 func getRandomData(source []string) string {
 	formats := getRandomFormat(source)
-	fmt.Println(formats)
 	parseFormat := parseFormat(formats)
 	return parseFormat
 }
@@ -87,20 +89,31 @@ func randomIndex(count int) int {
 func parseFormat(format string) string {
 
 	var response *string = &format
+	matches := regex(format)
 
-	formatPattern := strings.Fields(format)
-
-	for _, param := range formatPattern {
+	for _, param := range matches {
+		functionName := separator(param)
 		oldValue := param
-		newValue := functionMap[param]()
+		newValue := functionMap[functionName]()
 		*response = replaceTag(format, oldValue, newValue)
 	}
 
 	return *response
 }
 
+func regex(format string) []string {
+	pattern := "{{([a-zA-Z]+)}}"
+	r, _ := regexp.Compile(pattern)
+	matches := r.FindAllString(format, -1)
+	return matches
+}
+
 func replaceTag(content string, oldValue string, newValue string) string {
 	return strings.ReplaceAll(content, oldValue, newValue)
+}
+
+func separator(content string) string {
+	return strings.Replace(strings.Replace(content, "{{", "", -1), "}}", "", -1)
 }
 
 func firstNameMale() string {
@@ -126,4 +139,8 @@ func titleFemale() string {
 
 func suffix() string {
 	return getRandomElement(AllData.Suffix)
+}
+
+func freeEmailDomain() string {
+	return getRandomElement(AllData.FreeEmailDomain)
 }

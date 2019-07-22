@@ -89,5 +89,8 @@ var data = []byte(`{
 	],
 	"suffix" :[
 		"Jr.", "Sr.", "I", "II", "III", "IV", "V", "MD", "DDS", "PhD", "DVM"
+	],
+	"freeEmailDomain": [
+		"gmail.com", "yahoo.com", "hotmail.com"
 	]
 }`)

@@ -15,6 +15,7 @@ GoSeeder is heavily inspired by fzaninotto's [fzaninotto/Faker](https://github.c
 - [Basic Usage](#basic-usage)
 - [Formatters](#formatters)
 	- [Name](#name)
+	- [Internet](#internet)
 - [Contributors](#contributors)
 - [License](#license)
 
@@ -24,6 +25,8 @@ GoSeeder is heavily inspired by fzaninotto's [fzaninotto/Faker](https://github.c
 ```go get github.com/bariseser/Go-Seeder```
 
 ## Basic Usage
+
+### Name
 ````go
 
 package main
@@ -57,6 +60,11 @@ func main() {
 	seeder.Suffix()
 }
 ````
+### Internet
+````go
+    //marcellus@yahoo.com
+    seeder.Email()
+````
 
 ## Formatters
 
@@ -69,6 +77,12 @@ func main() {
     "titleMale firstNameMale lastName",
     "suffix firstNameFemale lastName ",
     "suffix titleMale firstNameMale lastName"
+    
+### Internet
+    
+        "firstNameMale@freeEmailDomain",
+        "firstNameFemale@freeEmailDomain",
+        "lastName@freeEmailDomain"
 
 ### Contributors
 * [Bariseser](https://github.com/bariseser)
