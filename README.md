@@ -7,6 +7,7 @@ GoSeeder is heavily inspired by fzaninotto's [fzaninotto/Faker](https://github.c
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/bariseser/Go-Seeder/issues)
 [![GoDoc](https://godoc.org/github.com/Pallinder/go-randomdata?status.svg)](https://godoc.org/github.com/bariseser/Go-Seeder)
 [![Go Report Card](https://goreportcard.com/badge/github.com/bariseser/Go-Seeder)](https://goreportcard.com/report/github.com/bariseser/Go-Seeder)
+[![Build Status](https://travis-ci.org/bariseser/Go-Seeder.svg?branch=master)](https://travis-ci.org/bariseser/Go-Seeder)
 
 # Table of Contents
 
