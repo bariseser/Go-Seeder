@@ -1,2 +1,77 @@
-# GoFaker
-Gofaker is a Go library which data generate for your project
+# GoSeeder
+
+GoSeeder is a Go library that generates fake data for you. Whether you need to bootstrap your database, create good-looking XML documents, fill-in your persistence to stress test it, or anonymize data taken from a production service.
+
+GoSeeder is heavily inspired by fzaninotto's [fzaninotto/Faker](https://github.com/fzaninotto/Faker)
+
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/bariseser/Go-Seeder/issues)
+[![GoDoc](https://godoc.org/github.com/Pallinder/go-randomdata?status.svg)](https://godoc.org/github.com/bariseser/Go-Seeder)
+[![Go Report Card](https://goreportcard.com/badge/github.com/bariseser/Go-Seeder)](https://goreportcard.com/report/github.com/bariseser/Go-Seeder)
+
+# Table of Contents
+
+- [Installation](#installation)
+- [Basic Usage](#basic-usage)
+- [Formatters](#formatters)
+	- [Person](#person_formatter)
+- [Contributors](#contributors)
+- [License](#license)
+
+
+## Installation
+
+```go get github.com/bariseser/Go-Seeder```
+
+## Basic Usage
+````go
+
+package main
+
+import (
+    "fmt"
+    "github.com/bariseser/Go-Seeder"
+)
+
+func main() {
+	//Earnest Abshire
+	//PhD Mrs Patrick Emard
+	seeder.Name()
+	
+	// Randall
+	seeder.FirstNameMale()
+	
+	//Daisha
+	seeder.FirstNameFemale()
+	
+	//Abernathy
+	seeder.LastName()
+	
+	//Mr
+	seeder.TitleMale()
+	
+	//Miss
+	seeder.TitleFemale()
+	
+	//PhD
+	seeder.Suffix()
+}
+````
+
+## Formatters
+
+### Name
+
+    "firstNameMale lastName",
+    "firstNameMale lastName",
+    "firstNameMale lastName",
+    "firstNameMale lastName",
+    "titleMale firstNameMale lastName",
+    "suffix firstNameFemale lastName ",
+    "suffix titleMale firstNameMale lastName"
+
+### Contributors
+* [Bariseser](https://github.com/bariseser)
+
+##License
+
+GoSeeder is released under the MIT Licence. See the bundled LICENSE file for details.
