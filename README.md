@@ -4,6 +4,7 @@ GoSeeder is a Go library that generates fake data for you. Whether you need to b
 
 GoSeeder is heavily inspired by fzaninotto's [fzaninotto/Faker](https://github.com/fzaninotto/Faker)
 
+[![Version Status](https://img.shields.io/badge/v1.0-release-blue.svg)](https://github.com/bariseser/Go-Seeder/releases/tag/v1.0)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/bariseser/Go-Seeder/issues)
 [![GoDoc](https://godoc.org/github.com/Pallinder/go-randomdata?status.svg)](https://godoc.org/github.com/bariseser/Go-Seeder)
 [![Go Report Card](https://goreportcard.com/badge/github.com/bariseser/Go-Seeder)](https://goreportcard.com/report/github.com/bariseser/Go-Seeder)
