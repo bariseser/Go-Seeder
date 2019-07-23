@@ -23,6 +23,7 @@ type Data struct {
 	TitleFemale     []string `json:"titleFemale"`
 	Suffix          []string `json:"suffix"`
 	FreeEmailDomain []string `json:"freeEmailDomain"`
+	Tld             []string `json:"tld"`
 }
 
 type serviceProvider struct {
@@ -141,6 +142,15 @@ func suffix() string {
 	return getRandomElement(AllData.Suffix)
 }
 
+func tld() string {
+	return getRandomElement(AllData.Tld)
+}
+
 func freeEmailDomain() string {
 	return getRandomElement(AllData.FreeEmailDomain)
+}
+
+func domainName() string {
+	name := strings.ToLower(lastName())
+	return name + "." + tld()
 }

@@ -33,3 +33,7 @@ func Suffix() string {
 func Email() string {
 	return strings.ToLower(getRandomData(AllFormat.Email))
 }
+
+func Domain() string {
+	return domainName()
+}

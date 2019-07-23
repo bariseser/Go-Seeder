@@ -44,6 +44,12 @@ func main() {
 	// Randall
 	seeder.FirstNameMale()
 	
+     //marcellus@yahoo.com
+    seeder.Email()
+    
+    //wilderman.info
+    seeder.Domain()
+	
 	//Daisha
 	seeder.FirstNameFemale()
 	
@@ -60,30 +66,24 @@ func main() {
 	seeder.Suffix()
 }
 ````
-### Internet
-````go
-    //marcellus@yahoo.com
-    seeder.Email()
-````
 
 ## Formatters
 
 ### Name
 
-    "firstNameMale lastName",
-    "firstNameMale lastName",
-    "firstNameMale lastName",
-    "firstNameMale lastName",
-    "titleMale firstNameMale lastName",
-    "suffix firstNameFemale lastName ",
-    "suffix titleMale firstNameMale lastName"
+    - Name
+    - FirstNameMale
+    - FirstNameFemale
+    - LastName
+    - titleMale
+    - TitleFemale
+    - Suffix
     
 ### Internet
     
-        "firstNameMale@freeEmailDomain",
-        "firstNameFemale@freeEmailDomain",
-        "lastName@freeEmailDomain"
-
+    - Email
+    - Domain
+     
 ### Contributors
 * [Bariseser](https://github.com/bariseser)
 

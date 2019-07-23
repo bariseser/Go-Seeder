@@ -92,5 +92,8 @@ var data = []byte(`{
 	],
 	"freeEmailDomain": [
 		"gmail.com", "yahoo.com", "hotmail.com"
+	],
+	"tld": [
+		"com", "biz", "info", "net", "org"
 	]
 }`)
